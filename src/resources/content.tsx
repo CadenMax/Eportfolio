@@ -1,0 +1,324 @@
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { Line, Logo, Row, Text } from "@once-ui-system/core";
+
+const person: Person = {
+  firstName: "Caden",
+  lastName: "Maxwell",
+  name: `Caden Maxwell`,
+  role: "Software Developer",
+  avatar: "/images/avatar.png",
+  email: "cadenmax@pm.me",
+  location: "Australia/Brisbane", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
+};
+
+const newsletter: Newsletter = {
+  display: false,
+  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  description: <>My weekly newsletter about creativity and engineering</>,
+};
+
+const social: Social = [
+  // Links are automatically displayed.
+  // Import new icons in /once-ui/icons.ts
+  {
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/CadenMax",
+  },
+  {
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/caden-maxwell",
+  },
+  {
+    name: "Email",
+    icon: "email",
+    link: `mailto:${person.email}`,
+  },
+];
+
+const home: Home = {
+  path: "/",
+  image: "/images/og/home.jpg",
+  label: "Home",
+  title: `${person.name}'s Portfolio`,
+  description: `Portfolio website showcasing my work as a ${person.role}`,
+  headline: <>Translating ideas into interactive experiences.</>,
+  featured: {
+    display: false,
+    title: (
+      <Row gap="12" vertical="center">
+        <strong className="ml-4">Once UI</strong>{" "}
+        <Line background="brand-alpha-strong" vert height="20" />
+        <Text marginRight="4" onBackground="brand-medium">
+          Featured work
+        </Text>
+      </Row>
+    ),
+    href: "/work/building-once-ui-a-customizable-design-system",
+  },
+  subline: (
+    <>
+      I'm Caden, an up and coming software developer based in Brisbane, Australia
+    </>
+  ),
+};
+
+const about: About = {
+  path: "/about",
+  label: "About",
+  title: `About – ${person.name}`,
+  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  tableOfContent: {
+    display: true,
+    subItems: false,
+  },
+  avatar: {
+    display: true,
+  },
+  calendar: {
+    display: true,
+    link: "https://cal.com",
+  },
+  intro: {
+    display: true,
+    title: "Introduction",
+    description: (
+      <>
+        Hi, I’m Caden Maxwell, a Brisbane-based software developer with a passion for front-end design
+        and creative problem-solving. I love exploring new technologies, experimenting with open-source
+        projects, and crafting web experiences that blend functionality with imagination.
+      </>
+    ),
+  },
+  studies: {
+    display: true,
+    title: "Studies",
+    institutions: [
+      {
+        name: "Griffith University",
+        timeframe: "2021 – 2025",
+        description: (
+          <>
+            <b><i>Bachelor of Information Technology</i> | <i>Major in Software Development</i></b>
+            <br />
+            Developed a comprehensive understanding of software development and IT systems, focusing on building modern, scalable applications with contemporary technologies and frameworks. Key areas of experience include:
+            <ul>
+              <li>Programming fundamentals and Object-Oriented coding using <b>Python</b></li>
+              <li>Front-end development using <b>React</b> and <b>Angular</b></li>
+              <li>Mobile application development with <b>React Native (Expo)</b></li>
+              <li>Relational database design and integration with <b>SQL</b>, <b>Laravel</b>, and <b>PHP</b></li>
+              <li>Back-end configuration and deployment using <b>AWS</b>, <b>Docker</b>, and <b>Linux</b></li>
+              <li>Game design and development using <b>Unity</b> and <b>Godot</b></li>
+            </ul>
+            Strengthened collaboration, version control, and analytical problem-solving skills through practical, project-based coursework and cross-disciplinary teamwork.
+          </>
+        ),
+      },
+      {
+        name: "RMIT University (via Open Universities Australia)",
+        timeframe: "2020 – 2021",
+        description: (
+          <>
+            <b><i>Bachelor of Information Technology – Pathway Program</i></b>
+            <br />
+            Completed foundational programming and computer systems courses in preparation for tertiary-level IT study.
+            Built a strong grounding in software logic, web technologies, and the principles of modern computing. Establishing the foundation for advanced study at Griffith University.
+          </>
+        ),
+      },
+      {
+        name: "VET Certification",
+        timeframe: "2017 – 2019",
+        description: (
+          <>
+            <b><i>Certificate III in Information, Digital Media and Technology</i></b>
+            <br />
+            Gained early exposure to IT operations, hardware configuration, and digital media production.
+            This course sparked a lasting interest in technology and laid the groundwork for pursuing a career in software development.
+          </>
+        ),
+      },
+    ],
+  },
+
+  work: {
+    display: true, // set to false to hide this section
+    title: "Work Experience",
+    experiences: [
+      {
+        company: "ECKOO",
+        timeframe: "April 2023 - Present",
+        role: "IT Support Officer",
+        achievements: [
+          <>
+            Manage and maintain IT infrastructure for primary schools across Brisbane. This includes troubleshooting hardware and software issues, ensuring network security, and providing timely support to staff and students.
+          </>,
+          <>
+            Spearheaded the integration of AI tools into design workflows, enabling designers to
+            iterate 50% faster.
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Once UI Project",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Creativ3",
+        timeframe: "2018 - 2022",
+        role: "Lead Designer",
+        achievements: [
+          <>
+            Developed a design system that unified the brand across multiple platforms, improving
+            design consistency by 40%.
+          </>,
+          <>
+            Led a cross-functional team to launch a new product line, contributing to a 15% increase
+            in overall company revenue.
+          </>,
+        ],
+        images: [],
+      },
+    ],
+  },
+  technical: {
+    display: true, // set to false to hide this section
+    title: "Technical skills",
+    skills: [
+      {
+        title: "Figma",
+        description: (
+          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+        ),
+        tags: [
+          {
+            name: "Figma",
+            icon: "figma",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Next.js",
+        description: (
+          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+        ),
+        tags: [
+          {
+            name: "JavaScript",
+            icon: "javascript",
+          },
+          {
+            name: "Next.js",
+            icon: "nextjs",
+          },
+          {
+            name: "Supabase",
+            icon: "supabase",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+    ],
+  },
+};
+
+const blog: Blog = {
+  path: "/blog",
+  label: "Blog",
+  title: "Writing about design and tech...",
+  description: `Read what ${person.name} has been up to recently`,
+  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // All posts will be listed on the /blog route
+};
+
+const work: Work = {
+  path: "/work",
+  label: "Work",
+  title: `Projects – ${person.name}`,
+  description: `Design and dev projects by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/blog/posts
+  // All projects will be listed on the /home and /work routes
+};
+
+const gallery: Gallery = {
+  path: "/gallery",
+  label: "Gallery",
+  title: `Photo gallery – ${person.name}`,
+  description: `A photo collection by ${person.name}`,
+  // Images by https://lorant.one
+  // These are placeholder images, replace with your own
+  images: [
+    {
+      src: "/images/gallery/horizontal-1.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-4.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-1.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-2.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-2.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-4.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-3.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+  ],
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery };
