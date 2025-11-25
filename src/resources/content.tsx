@@ -46,17 +46,17 @@ const home: Home = {
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Translating ideas into interactive experiences.</>,
   featured: {
-    display: false,
+    display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">My Projects</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
@@ -87,7 +87,7 @@ const about: About = {
     description: (
       <>
         Hi, I’m Caden Maxwell, a Brisbane-based software developer with a passion for front-end design
-        and creative problem-solving. I love exploring new technologies, experimenting with open-source
+        and creative problem solving. I love exploring new technologies, experimenting with open-source
         projects, and crafting web experiences that blend functionality with imagination.
       </>
     ),
@@ -153,35 +153,32 @@ const about: About = {
         role: "IT Support Officer",
         achievements: [
           <>
-            Manage and maintain IT infrastructure for primary schools across Brisbane. This includes troubleshooting hardware and software issues, ensuring network security, and providing timely support to staff and students.
+            Manage and maintain IT infrastructure for primary schools across Brisbane. 
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Troubleshooting hardware and software issues, ensuring network security, and providing timely support to staff and students.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Academy of Interactive Entertainment",
+        timeframe: "2016 Work Experience",
+        role: "Game Devloper",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Completed a 1 week crash course on game development with professionals in the industry
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Created a playable game using Unity and Maya 3D
           </>,
         ],
         images: [],
@@ -189,67 +186,134 @@ const about: About = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
+  display: true,
+  title: "Technical skills",
+  skills: [
+    {
+      title: "Front-End Development",
+      description: (
+        <>
+          Experienced building responsive, user-focused interfaces using modern
+          JavaScript frameworks and strong fundamentals in HTML and CSS. Able to 
+          design and implement component-based UIs, manage application state, and 
+          create clean, maintainable front-end architectures.
+        </>
+      ),
+      tags: [
+        { name: "JavaScript", icon: "javascript" },
+        { name: "React", icon: "react" },
+        { name: "React Native (Expo)", icon: "react" },
+        { name: "Angular", icon: "angular" },
+        { name: "HTML", icon: "html5" },
+        { name: "CSS", icon: "css3" },
+      ],
+      images: [],
+    },
+    {
+      title: "Game Development",
+      description: (
+        <>
+          Built multiple 2D/3D interactive projects using Unity and Godot, including
+          a full capstone escape room game. Strong understanding of scene
+          management, gameplay logic, event systems, asset pipelines, and 
+          collaborative game development workflows.
+        </>
+      ),
+      tags: [
+        { name: "Unity", icon: "unity" },
+        { name: "Godot", icon: "godot" },
+        { name: "C#", icon: "csharp" },
+        { name: "GDScript", icon: "godot" },
+      ],
+      images: [],
+    },
+    {
+      title: "Full-Stack & Backend Essentials",
+      description: (
+        <>
+          Capable of building small-scale backend services, integrating APIs, and 
+          deploying applications. Comfortable working with REST APIs, Node.js, 
+          relational databases, and authentication systems. Strong focus on practical 
+          problem-solving rather than unnecessary complexity.
+        </>
+      ),
+      tags: [
+        { name: "Node.js", icon: "nodejs" },
+        { name: "Express", icon: "nodejs" },
+        { name: "SQL", icon: "database" },
+        { name: "PHP", icon: "php" },
+        { name: "Laravel", icon: "laravel" },
+        { name: "REST APIs", icon: "api" },
+      ],
+      images: [],
+    },
+    {
+      title: "Cloud, Deployment & DevOps",
+      description: (
+        <>
+          Familiar with deploying applications using Docker, Linux environments, and 
+          cloud services. Used AWS and Docker in university projects and for hosting 
+          game deployments, including containerising web builds for client delivery.
+        </>
+      ),
+      tags: [
+        { name: "Docker", icon: "docker" },
+        { name: "Linux", icon: "linux" },
+        { name: "AWS", icon: "aws" },
+      ],
+      images: [],
+    },
+    {
+      title: "UI/UX & Prototyping",
+      description: (
+        <>
+          Able to design wireframes, scene flows, and prototypes using Figma. 
+          Comfortable translating designs directly into functional UIs across web, 
+          mobile, and game projects.
+        </>
+      ),
+      tags: [
+        { name: "Figma", icon: "figma" },
+      ],
+      images: [],
+    },
+    {
+      title: "Scripting & General Programming",
+      description: (
+        <>
+          Strong foundation in programming fundamentals, object-oriented design,
+          and problem-solving across multiple languages. Experienced in Python,
+          C#, JavaScript, and GDScript through coursework and personal projects.
+        </>
+      ),
+      tags: [
+        { name: "Python", icon: "python" },
+        { name: "JavaScript", icon: "javascript" },
+        { name: "C#", icon: "csharp" },
+        { name: "GDScript", icon: "godot" },
+      ],
+      images: [],
+    },
+    {
+      title: "Procedural Generation & Creative Tools",
+      description: (
+        <>
+          Developed multiple D&D generators from scratch using vanilla JavaScript, 
+          including taverns, loot, travelers, and potion systems. Experienced with 
+          building custom logic systems, weighted randomness, and integrating 
+          external APIs such as ChatGPT for enhanced features.
+        </>
+      ),
+      tags: [
+        { name: "JavaScript", icon: "javascript" },
+        { name: "OpenAI API", icon: "api" },
+        { name: "Procedural Generation", icon: "sparkles" },
+      ],
+      images: [],
+    }
+  ],
+}
+
 };
 
 const blog: Blog = {

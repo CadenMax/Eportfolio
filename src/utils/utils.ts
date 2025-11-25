@@ -68,5 +68,7 @@ function getMDXData(dir: string) {
 
 export function getPosts(customPath = ["", "", "", ""]) {
   const postsDir = path.join(process.cwd(), ...customPath);
-  return getMDXData(postsDir);
+  return getMDXData(postsDir).sort((a, b) =>
+    a.metadata.publishedAt < b.metadata.publishedAt ? 1 : -1
+  );
 }

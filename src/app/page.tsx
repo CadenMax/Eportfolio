@@ -101,6 +101,9 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
+        <Heading as="h2" variant="display-strong-xs" wrap="balance">
+          Latest from the blog
+        </Heading>
         <Projects range={[1, 1]} />
       </RevealFx>
       {routes["/blog"] && (
@@ -123,7 +126,7 @@ export default function Home() {
           </Row>
         </Column>
       )}
-      <Projects range={[2]} />
+      {/* <Projects sort='date-desc' range={[1]} /> */}
       <Mailchimp />
     </Column>
   );
