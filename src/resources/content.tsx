@@ -49,14 +49,12 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">My Projects</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          MyProjects
         </Text>
       </Row>
     ),
-    href: "/work",
+    href: "/work/godot-cybsec-escape-room",
   },
   subline: (
     <>
@@ -242,7 +240,6 @@ const about: About = {
         { name: "Express", icon: "nodejs" },
         { name: "SQL", icon: "database" },
         { name: "PHP", icon: "php" },
-        { name: "Laravel", icon: "laravel" },
         { name: "REST APIs", icon: "api" },
       ],
       images: [],
