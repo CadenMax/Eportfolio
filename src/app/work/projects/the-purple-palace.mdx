@@ -1,0 +1,44 @@
+---
+title: "The Purple Palace"
+publishedAt: "2024-04-21"
+summary: "A custom made Dungeons and Dragons generator web-application, a personal project to help push my boundaries while makign a tool that can be used practically"
+images:
+  - "/images/projects/the-purple-palace/image-01.png"
+  - "/images/projects/the-purple-palace/image-02.png"
+  - "/images/projects/the-purple-palace/image-03.png"
+  - "/images/projects/the-purple-palace/image-04.png"
+link: "https://cadenmax.github.io/ThePurplePalace"
+---
+
+## Overview
+
+The Purple Palace is a fully custom-built Dungeons and Dragons generator tool designed to help Dungeon Masters streamline their campaign preparation. The entire project is written from scratch using only HTML, CSS, and vanilla JavaScript, with no external frameworks. The site currently includes multiple generators—Taverns, Travelers, Loot, and Potions—and is structured for future expansion as new ideas and features develop.
+
+## Key Features
+
+- **Tavern Generator**: Creates unique taverns with various filters to customise atmosphere, clientele, themes, menus, and naming styles.
+- **Traveler Generator**: Produces a 'passing moment' that Dungeon Masters can utilise when they are stumped for ideas.
+- **Loot Generator**: Generates treasure with filters to control rarity of items based on, party level, wealth and the option to customise how many items to generate.
+- **Potion Generator**: Builds imaginative potion descriptions and, optionally, potion bottle images using ChatGPT’s image generation.
+- **ChatGPT-Enhanced Potions**: The potion generator can request AI-generated images (currently requires adding a personal API key directly to the source code).
+
+## Technologies Used
+
+- **HTML / CSS / JavaScript**: The entire site is built without frameworks, relying solely on core web technologies.
+- **Custom Data Structures**: Arrays, objects, and weighted selection logic drive the random-generation systems.
+- **ChatGPT Image API (optional)**: Integrated for potion images, currently requiring a user-supplied API key in the source.
+- **Local Storage (planned)**: For saving user preferences and future account-based features.
+- **No Frameworks**: A deliberate design choice to deepen understanding of core web development and maintain full control over every component.
+
+## Challenges and Learnings
+
+One major challenge has been consolidating the many different ways DND elements can be generated, such as tavern structures, item loot tables, and potion effects—into clean, reusable logic. Because each generator requires different rules and creative considerations, designing systems that stay flexible without becoming messy has been an ongoing learning process.
+
+Another challenge is the self-imposed rule of avoiding frameworks. As the feature list grows, the limitations of pure vanilla JavaScript become more apparent, especially when exploring more advanced ideas like user accounts and persistent data. This constraint has pushed me to think more deeply about structure, modularity, and long-term maintainability.
+
+Overall, the project has forced me to balance creativity, technical clarity, and forward-thinking design as I explore how to scale a pure JS application.
+
+## Outcome
+
+Purple Palace remains a work in progress, but several generators are fully functional and actively useful for Dungeon Masters during campaign preparation. The project demonstrates my ability to design systems from the ground up, experiment with creative procedural generation, and build increasingly complex features without relying on external libraries. It serves as both a practical tool and a long-term personal project where I continue refining my problem-solving and front-end development skills.
+

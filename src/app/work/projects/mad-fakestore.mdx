@@ -1,0 +1,42 @@
+---
+title: "Mobile Application Development - FakeStore"
+publishedAt: "2024-05-25"
+summary: "A mobile application made to replicate online retail stores. Made as part of an assignment during my studies at Griffith University"
+images:
+  - "/images/projects/mad-fakestore/image-01.png"
+  - "/images/projects/mad-fakestore/image-02.png"
+  - "/images/projects/mad-fakestore/image-03.png"
+  - "/images/projects/mad-fakestore/image-04.png"
+link: "https://github.com/CadenMax/MAD_FakeStore"
+---
+## Overview
+
+This project was developed as part of a university assignment using React Native with Expo to build a cross-platform mobile application for Android and iOS. The brief required creating a functional “fake store” app with account management, product browsing, a shopping cart, and full navigation between screens. While the project followed strict feature requirements, I had full control over the design and user experience.
+
+## Key Features
+
+- **User Authentication**: Users can create an account, sign in, sign out, and update basic account details such as their name and password.
+- **Global State Management**: User information and cart data are stored using React’s `useState` and `useContext`, allowing persistent state across the app while it is running.
+- **Product Catalogue**: The app retrieves product details including images, descriptions, and prices from a pre-provided Fakestore API.
+- **Category Filtering**: A dedicated categories screen allows users to filter items by type.
+- **Item Detail Pages**: Each product has its own screen displaying all relevant information.
+- **Shopping Cart & Checkout**: Users can add items to a cart, review totals, adjust quantities, and proceed through a basic checkout flow.
+
+## Technologies Used
+
+- **React Native / Expo 50**: Used to build the application. Expo 50 was chosen over Expo 51 due to major breaking changes and limited course support for the newer version.
+- **JavaScript**: Used for component logic, API data handling, and state management.
+- **Fakestore API**: Provided all product data (titles, descriptions, images, costs).
+- **React Navigation**: Implemented a structured navigation system using stack and tab navigators.
+- **useState / useContext**: Managed user information, login state, and cart functionality without needing an external database.
+- **Expo Components & Stylesheets**: Used for responsive mobile UI design and layout.
+
+## Challenges and Learnings
+
+One major challenge was deciding between Expo 50 and the newly released Expo 51. The newer version introduced breaking changes that deviated heavily from the course material, so I chose the stable option to ensure compatibility and reliability, an important lesson in evaluating technologies based on constraints rather than novelty.  
+
+A second challenge was the scale of the application. This was the largest mobile project I had attempted, and it required learning React Native, Expo, and much of JavaScript simultaneously. Managing global state, API calls, authentication flows, and multi-screen navigation pushed me well beyond my previous experience. The process taught me how to break down complex problems, learn unfamiliar frameworks quickly, and structure code for maintainability.
+
+## Outcome
+
+The final application met all required features and received a grade of 84/100. Completing this project strengthened my confidence in mobile development and deepened my understanding of React Native, state management, and API integration. It demonstrated that I can deliver a functional and polished product while working within a defined brief and learning new technologies at speed.
